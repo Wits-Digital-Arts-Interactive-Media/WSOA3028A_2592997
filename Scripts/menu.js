@@ -2,10 +2,10 @@ const root = "/WSOA3028A_2592997"
 
 const menuItems = [
     { name: "Home", href: "/WSOA3028A_2592997/index.html" },    
-    { name: "Blogs", href: "/Blogs/index.html" },
-    { name: "Essays", href: "/Essays/EssayIndex.html" },
-    { name: "Portfolio", href: "/PortfolioFolder/index.html" },
-    { name: "Design", href: "/DesignFolder/index.html" },
+    { name: "Blogs", href: "/WSOA3028A_2592997/Blogs/index.html" },
+    { name: "Essays", href: "/WSOA3028A_2592997/Essays/EssayIndex.html" },
+    { name: "Portfolio", href: "/WSOA3028A_2592997/PortfolioFolder/index.html" },
+    { name: "Design", href: "/WSOA3028A_2592997/DesignFolder/index.html" },
 ]
 export function initialise(currentPage) {
     const nav = document.querySelector("header > nav")       
