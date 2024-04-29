@@ -6,8 +6,10 @@
     <meta name="description" content="Welcome to Amro Ahmed's portfolio website. Explore Amro's projects, skills, and experiences in web development and game design.">
     <meta name="author" content="Amro Ahmed">
     <meta name="keywords" content="Amro Ahmed, portfolio, web development, game design">
+    <script src="scripts/GreetThingy.js"></script>
     <script type="module"> import {initialise } from "./Scripts/menu.js" 
         initialise("index.html")</script>
+        
     
     <title>Amro's First Website</title>
 </head>
@@ -21,6 +23,12 @@
 
         </nav>
     </header>
+    
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput">
+    <button onclick="displayGreeting()">Submit</button>
+
+    <p id="greeting"></p>
     
     <nav>
         <ul>
