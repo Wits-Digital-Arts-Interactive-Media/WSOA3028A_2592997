@@ -2,11 +2,10 @@ const root = "/WSOA3028A_2592997";
 
 const menuItems = [
     { name: "Home", href: `${root}/index.html` },
-    { name: "Profile", href: `${root}/profile/index.html` },
-    { name: "Blogs", href: `${root}/blogs/index.html` },
-    { name: "Design", href: `${root}/design/index.html` },
-    { name: "Essays", href: `${root}/essays/index.html` },
-    { name: "Portfolio", href: `${root}/portfolio/index.html` }
+    { name: "Blogs", href: `${root}/Blogs/index.html` },
+    { name: "Design", href: `${root}/DesignFolder/index.html` },
+    { name: "Essays", href: `${root}/Essays/index.html` },
+    { name: "Portfolio", href: `${root}/PortfolioFolder/index.html` }
 ];
 
 
