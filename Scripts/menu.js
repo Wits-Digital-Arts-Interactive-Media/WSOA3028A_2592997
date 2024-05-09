@@ -1,14 +1,11 @@
-const root = "/WSOA3028A_2592997"
-
 const menuItems = [
-    { name: "Home", href: `${root}/index.html` },  
-    { name: "Blogs", href: `${root}/Blogs/index.html` },
-    { name: "The Other Blog Doesnt work", href: `${root}/Blogs/index.html`},
-    { name: "test", href: `/WSOA3028A_2592997/Blogs/index.html`},
-    { name: "Essays", href: `${root}/Essays/EssayIndex.html` },
-    { name: "Portfolio", href: `${root}/PortfolioFolder/index.html` },
-    { name: "Design", href: `${root}/DesignFolder/index.html` },
+    { name: "Home", href: "/index.html" },
+    { name: "Blog Posts", href: "/Blogs/index.html" },
+    { name: "Essay", href: `/Essays/EssayIndex.html` },
+    { name: "Portfolio", href: `/PortfolioFolder/index.html` },
+    { name: "Design", href: `/DesignFolder/index.html` },
 ]
+
 export function initialise(currentPage) {
     const nav = document.querySelector("header > nav")       
     const ul = document.createElement("ul")                  
