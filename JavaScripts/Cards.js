@@ -16,11 +16,11 @@ for(let i = 0; i < cards.length; i++){
 }
 
 function makeBigger(activeCard){
-    activeCard.style.height = "32px";
+    activeCard.style.height = "105%";
     console.log("its on");
 }
 
 function makeSmaller(inactiveCard){
-    inactiveCard.style.height = "16px";
+    inactiveCard.style.height = "95%";
 }
 

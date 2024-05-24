@@ -16,6 +16,9 @@
     position : relative;
 }
 
+.cardClass:hover{
+    size: 110%;
+}
 
 
 .cardText{text-align: center;}
