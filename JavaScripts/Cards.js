@@ -2,7 +2,7 @@ const cardClass = 'cardClass';
 const cards = document.getElementsByClassName(cardClass);
 const cardsArray = Array.from(cards);
 
-array.forEach(cards => {
+array.forEach(cardsArray => {
     cards.onmouseover = function(){
         MakeBigger(cards)
     };
