@@ -9,4 +9,5 @@ for(let i = 0; i < cards.length; i++){
 
 function MakeBigger(ActiveCard){
     ActiveCard.style.height = "32px";
+    console.log("its on");
 }
