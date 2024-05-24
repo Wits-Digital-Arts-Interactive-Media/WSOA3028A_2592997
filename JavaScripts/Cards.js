@@ -2,7 +2,7 @@ const cardClass = 'cardClass';
 const cards = document.getElementsByClassName(cardClass);
 
 for(let i = 0; cards.length; i++){
-    if (card(i).onmouseover = function(){
+    if (cards(i).onmouseover = function(){
         MakeBigger(i)
     });
 }
