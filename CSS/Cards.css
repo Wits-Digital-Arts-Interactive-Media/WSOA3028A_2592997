@@ -1,0 +1,23 @@
+.cardContainer{
+    display: flex;
+    gap: 20px;
+    height: 400px;
+    position: relative;
+    top: 3cm;
+    left: 4cm;
+    text-align: center;
+}
+
+.cardClass{
+    border-style: solid;
+    border-width: 1;
+    background-color: bisque;
+    padding: 3cm;
+    position : relative;
+}
+
+body{
+    background-color: rgb(62, 62, 62);
+}
+
+.cardText{text-align: center;}
