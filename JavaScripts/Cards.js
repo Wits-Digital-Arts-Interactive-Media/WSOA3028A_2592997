@@ -1,6 +1,13 @@
 const cardClass = 'cardClass';
 const cards = document.getElementsByClassName(cardClass);
 
+for(let f = 0; f < cards.length; f++){
+    f.addEventListener("click", clickedOnCard[f]);
+}
+
+
+
+
 for(let i = 0; i < cards.length; i++){
     if (cards[i].addEventListener(mouseover = function(){
         makeBigger(i);
@@ -22,5 +29,9 @@ function makeBigger(activeCard){
 
 function makeSmaller(inactiveCard){
     inactiveCard.style.height = "95%";
+}
+
+function clickedOnCard(clickedCard){
+    console.log("Clicked on");
 }
 
