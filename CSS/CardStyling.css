@@ -9,9 +9,7 @@
 }
 
 .cardClass{
-    border-style: solid;
-    border-width: 1;
-    border-radius: 1;
+    border-radius: 25px;
     background-color: rgb(210, 209, 209);
     padding: 3cm;
     position : relative;
