@@ -1,12 +1,11 @@
 const cardClass = 'cardClass';
 const cards = document.getElementsByClassName(cardClass);
-const cardsArray = Array.from(cards);
 
-array.forEach(cardsArray => {
-    cards.onmouseover = function(){
-        MakeBigger(cards)
-    };
-});
+for(let i = 0; cards.length; i++){
+    if (card(i).onmouseover = function(){
+        MakeBigger(i)
+    });
+}
 
 function MakeBigger(ActiveCard){
     ActiveCard.style.height = "32px";
