@@ -18,6 +18,7 @@
 
 .cardClass:hover{
     size: 110%;
+    opacity: 0.3;
 }
 
 
