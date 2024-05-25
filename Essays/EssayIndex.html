@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Essays</title>    
-    <script type="module"> import {initialise } from "../../JavaScripts/menu.js" 
+    <script type="module"> import {initialise } from "../JavaScripts/menu.js" 
         initialise("EssayIndex.html")</script>
-        <link rel="stylesheet" href="../../CSS/GeneralStyling.css">
+        <link rel="stylesheet" href="../CSS/GeneralStyling.css">
+        <link rel="stylesheet" href="../CSS/EssayStyling.css">
+        <script type="module" src="../JavaScripts/essayInteraction.js"></script>
+
 </head>
 
 <body>
@@ -17,14 +20,17 @@
         </nav>
     </header>
 
-    <h1>Essays</h1>
+    <h1 id="essayHeading">Essays</h1>
 
 <body>
-    
-    <section>
-        <p><a href="./EssayFolder/EssayOne.html">Essay 1</a> </p>     
-    </section>
-    
+
+    <nav id="essayContainer">
+        <ul>
+            <li class="selectable"><a href="./EssayFolder/EssayOne.html"><p class="essayChangableText">Essay 1</p></a></li> 
+        </ul>          
+    </nav>
+     
+
 </body>
 
 </html>

@@ -1,0 +1,29 @@
+#essayHeading{
+    text-align: center;
+}
+
+#essayContainer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 0;
+    gap: 3px;
+}
+
+#essayContainer{
+    text-align: center;
+    justify-content: center;
+}
+
+
+.selectable{
+    width: 350px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: rgb(210, 209, 209);
+}
+
+.selectable a{
+    color: black;
+}
