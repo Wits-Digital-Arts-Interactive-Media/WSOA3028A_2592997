@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module"> import {initialise } from "../../Scripts/menu.js" 
-        initialise("BlogIndex.html")</script>
-    <script type="module" src="../JavaScripts/menu.js"></script>
     <link rel="stylesheet" href="../CSS/GeneralStyling.css">
+    <link rel="stylesheet" href="../CSS/BlogOrganisation.css">
     <script type="module"> import {initialise } from "../JavaScripts/menu.js" 
         initialise("index.html")</script>
 
-    <title>Blogs</title>
+    <title >Blogs</title>
 </head>
 
 <header id="mainHeader">
@@ -22,27 +20,28 @@
 
 <body>
     <section>
-        <h1>Weekly Blogs</h1>
+        <h1 id="blogTitle">Weekly Blogs</h1>
     </section>
 
     
     
-    <section>
-        <nav>
-            <li><a href="WeeklyBlogs/Week 1.html">Week 1</a></li>
-            <li><a href="WeeklyBlogs/Week 2.html">Week 2</a></li>
-            <li><a href="WeeklyBlogs/Week 3.html">Week 3</a></li>
-            <li><a href="WeeklyBlogs/Week 4.html">Week 4</a></li>
-            <li><a href="WeeklyBlogs/Week 6.html">Week 6</a></li>
-            <li><a href="WeeklyBlogs/Week 8.html">Week 8</a></li>
-            <li><a href="WeeklyBlogs/Week 9.html">Week 9</a></li>
-            <li><a href="WeeklyBlogs/Week 10.html">Week 10</a></li>
-        </nav>   
-    </section>
+    
+    <nav id="blogSelection">
+        <ul>
+            <li class="selectable"><a href="WeeklyBlogs/Week 1.html"><p id="week1Text">Week 1</p></a></li>
+            <li class="selectable"><a href="WeeklyBlogs/Week 2.html"><p id="week2Text">Week 2</p></a></li>
+            <li class="selectable"><a href="WeeklyBlogs/Week 3.html"><p id="week3Text">Week 3</p></a></li>
+            <li class="selectable"><a href="WeeklyBlogs/Week 4.html"><p id="week4Text">Week 4</p></a></li>
+            <li class="selectable"><a href="WeeklyBlogs/Week 6.html"><p id="week6Text">Week 6</p></a></li>
+            <li class="selectable"><a href="WeeklyBlogs/Week 8.html"><p id="week8Text">Week 8</p></a></li>
+            <li class="selectable"><a href="WeeklyBlogs/Week 9.html"><p id="week9Text">Week 9</p></a></li>
+            <li class="selectable"><a href="WeeklyBlogs/Week 10.html"><p id="week10Text">Week 10</p></a></li>
+        </ul>            
+    </nav>   
 
     <section>
         <footer>
-            <p><a href="../index.html">Home</a> </p> 
+            
         </footer>
     </section>    
 

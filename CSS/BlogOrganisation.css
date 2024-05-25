@@ -1,0 +1,21 @@
+#blogSelection ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 0;
+    gap: 3px;
+}
+
+#blogSelection{
+    text-align: center;
+}
+
+.selectable{
+    width: 80px;
+    height: 40px;
+}
+
+#blogTitle{
+    text-align: center;
+}
