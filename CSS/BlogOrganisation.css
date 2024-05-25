@@ -13,10 +13,17 @@
 }
 
 .selectable{
-    width: 80px;
+    width: 350px;
     height: 40px;
+    border-radius: 25px;
+    background-color: rgb(210, 209, 209);
+}
+
+.selectable a{
+    color: black;
 }
 
 #blogTitle{
     text-align: center;
 }
+
