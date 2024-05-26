@@ -29,6 +29,17 @@ width: 27%;
 }
 
 .images{
-    align-self: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 470px) {
+    .images{
+        width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
