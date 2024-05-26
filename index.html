@@ -13,20 +13,26 @@
     <script src = "JavaScripts/CardInteraction.js" defer></script>
     <script type="module"> import {initialise } from "./JavaScripts/menu.js" 
         initialise("index.html")</script>
-
+    <script type="module" src="./JavaScripts/introPage.js"></script>
 
 
     <title>Amro's First Website</title>
 </head>
 
-<header id="mainHeader">
-    <h3 class="name">Amro Ahmed</h3>
-    <nav class="navBar">
-        
-    </nav>
-</header>
+
 
 <body>
+    <div id="startupPage">
+        <div id="startupText">Hi there! I'm Amro. Welcome to my website</div>
+    </div>
+
+    <header id="mainHeader">
+        <h3 class="name">Amro Ahmed</h3>
+        <nav class="navBar">
+            
+        </nav>
+    </header>
+
     <div class="cardContainer">
         <div class="cardClass" data-url="./Blogs/BlogIndex.html">Blogs</div>
         <div class="cardClass" data-url="./Essays/EssayIndex.html">Essays</div>
