@@ -33,7 +33,7 @@ body{
     transform: scale(1.03);
     }
 
-#styleGuideText{
+.centralText{
     text-align: center;
 }
 
