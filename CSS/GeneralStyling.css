@@ -26,15 +26,15 @@ html, body {
 
 
 #startupText{
-    letter-spacing: 2px; 
-    border-right: 5px solid black;
+    letter-spacing: 2px;  
     white-space: nowrap;
-    overflow: hidden;
+    overflow: hidden;   
     animation: 
         typing 2s steps(41, end),
         cursor .5s step-end infinite alternate;
     font-size: 1.5em; 
     max-width: fit-content;
+    border-right: 5px solid black;
 }
 
 @keyframes cursor {
@@ -130,5 +130,12 @@ html, body {
 
     #mainHeader nav ul li:last-child {
         margin-right: 0;
+    }
+    
+    #startupText{
+        overflow-wrap: break-word;
+        border-right: none;
+        white-space: normal;
+        overflow: visible; 
     }
 }
