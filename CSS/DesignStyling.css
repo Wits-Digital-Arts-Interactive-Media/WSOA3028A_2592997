@@ -2,19 +2,24 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-#container ul{
-    list-style-type: none;
+#container{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2%;
+    justify-content: center;
+    gap: 20px;
+    height: 400px;
     position: relative;
-    left: 22%;
+    padding-top: 20px;
+    margin: 0 auto; 
+    text-align: center;
+    width: 100%; 
+    max-width: 1200px; 
+    box-sizing: border-box;
 }
 
 .selectable{
     width: 350px;
     height: 440px;
+    margin-top: 20px;
     border-radius: 25px;
     background-color: rgb(210, 209, 209);
 }
@@ -25,8 +30,8 @@ body{
 }
 
 .selectable:hover{
-width: 27%;
-}
+    transform: scale(1.03);
+    }
 
 #styleGuideText{
     text-align: center;
@@ -44,6 +49,17 @@ width: 27%;
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+    #container{
+        margin-top: 150px;
+        flex-direction: column;
+        justify-content: center;
+        height: 30px;
+        width: 240px;
+    }
+    .selectable{
+        width: 250px;
+        height: 440px;
     }
 }
 
