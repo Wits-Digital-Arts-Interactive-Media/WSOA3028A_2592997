@@ -1,8 +1,7 @@
 html, body {
-    margin: 0;
-    padding: 0;
     background-color: rgb(228, 228, 228);
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 #startupPage{
@@ -59,10 +58,6 @@ html, body {
     left: 0;
     padding: 0 20px;
     box-sizing: border-box;
-}
-
-.name {
-    padding-left: 20px;
 }
 
 .navBar {

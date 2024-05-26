@@ -1,5 +1,5 @@
 window.onload = function() {
-    localStorage.setItem('visited', 'false'); // Reset 'visited' flag to 'false' on every page load
+    localStorage.setItem('visited', 'false'); 
 };
 
 const Page = document.getElementById("startupPage");
@@ -21,5 +21,6 @@ function start(event){
         console.log("Transitioned");
         Page.parentNode.removeChild(Page);
         localStorage.setItem('visited', 'true');
+        Page.style.overflow= hidden;
     });
 }
