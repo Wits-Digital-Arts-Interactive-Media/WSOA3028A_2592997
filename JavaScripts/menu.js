@@ -12,7 +12,7 @@ const menuItems = [
 export function initialise(currentPage) {
     const nav = document.querySelector("header > nav")       
     const ul = document.createElement("ul")                  
-    for (let menuItem of menuItems) {                        
+    for (let menuItem of menuItems) {                   
         const li = document.createElement("li")              
         if (currentPage != menuItem.name) {                  
             const a = document.createElement("a")            

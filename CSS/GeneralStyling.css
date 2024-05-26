@@ -35,7 +35,8 @@ html, body {
 }
 
 #mainHeader nav ul li {
-    display: inline-flex;
+    display: block;
+    border-radius: 1;
     margin-right: 20px;
 }
 
@@ -48,14 +49,8 @@ html, body {
     text-decoration: none;
 }
 
-.navBar ul li {
-    display: block;
-    border-radius: 1;
-}
-
-.navBar ul li:hover {
-    background-color: pink;
-    border-radius: 1;
+#mainHeader nav ul li:hover {
+    text-decoration: underline;
 }
 
 #mainHeader nav ul li a:visited {
