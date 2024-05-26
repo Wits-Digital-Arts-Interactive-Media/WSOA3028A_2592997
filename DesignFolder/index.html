@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Designs</title>
-    <script type="module"> import {initialise } from "../../JavaScripts/menu.js" 
+    <script type="module"> import {initialise } from "../JavaScripts/menu.js" 
         initialise("EssayIndex.html")</script>
-        <link rel="stylesheet" href="../../CSS/GeneralStyling.css">
+        <link rel="stylesheet" href="../CSS/GeneralStyling.css">
+        <link rel="stylesheet" href="../CSS/DesignStyling.css">
+        <script src = "../JavaScripts/designFolderInteraction.js" defer></script>
 </head>
 
 <body>
@@ -17,9 +19,11 @@
         </nav>
     </header> 
     
-    
-    <a href = "./DesignPages/StyleGuide.html"> <h3>Style Guide</h3></a>
-    <p><br></p>
-    <a href = "./DesignPages/UIWireframes.html"> <h3>Wireframes</h3></a>
+    <nav id="container">
+        <ul>
+            <li class="selectable" data-url="./DesignPages/StyleGuide.html"><a href = "./DesignPages/StyleGuide.html"> <h3>Style Guide</h3></a></li>
+            <li class="selectable" data-url="./DesignPages/UIWireframes.html"><a href = "./DesignPages/UIWireframes.html"> <h3>Wireframes</h3></a></li>
+        </ul>
+    </nav>    
 </body>
 </html>

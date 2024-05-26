@@ -1,0 +1,26 @@
+#container ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2%;
+    position: relative;
+    left: 22%;
+}
+
+.selectable{
+    width: 350px;
+    height: 440px;
+    border-radius: 25px;
+    background-color: rgb(210, 209, 209);
+}
+
+.selectable a{
+    text-align: center;
+    color: black;
+}
+
+.selectable:hover{
+width: 27%;
+}
+
