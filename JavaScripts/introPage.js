@@ -1,6 +1,7 @@
 window.onload = function() {
-    localStorage.setItem('visited', 'false'); 
-}
+    if (localStorage.getItem('visited') !== 'true') {
+        localStorage.setItem('visited', 'false'); 
+    }}
 
 const bodyText = document.getElementById("bodyText");
 
