@@ -1,6 +1,8 @@
 window.onload = function() {
     localStorage.setItem('visited', 'false'); 
-};
+}
+
+const bodyText = document.getElementById("bodyText");
 
 const Page = document.getElementById("startupPage");
 
@@ -21,6 +23,6 @@ function start(event){
         console.log("Transitioned");
         Page.parentNode.removeChild(Page);
         localStorage.setItem('visited', 'true');
-        Page.style.overflow= hidden;
+        bodyText.style.overflow = 'auto';
     });
 }
