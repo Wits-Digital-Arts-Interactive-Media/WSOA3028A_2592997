@@ -24,3 +24,11 @@
 width: 27%;
 }
 
+#styleGuideText{
+    text-align: center;
+}
+
+.images{
+    align-self: center;
+}
+
