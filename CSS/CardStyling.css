@@ -30,7 +30,6 @@ html, body {
 
 .cardClass:hover {
     transform: scale(1.1);
-    box-shadow: 0.5px 1px;
     background-size: cover;
     background-position: center;
 }
