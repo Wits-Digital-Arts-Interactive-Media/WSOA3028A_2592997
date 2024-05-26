@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module"> import {initialise } from "../../Scripts/menu.js" 
+    <script type="module"> import {initialise } from "../JavaScripts/menu.js"
         initialise("index.html")</script>
-    <script type="module" src="../../Scripts/menu.js"></script>
+    <script type="module" src="../JavaScripts/menu.js"></script>
+    <link rel="stylesheet" href="../CSS/GeneralStyling.css">
+    <link rel="stylesheet" href="../CSS/PortfolioStyling.css">
+    <script type="module" src="../JavaScripts/portfolioController.js"></script>
     <title>Portfolio</title>
 </head>
 
 <body>
-    
-    <section>
-        <h1>My Work</h1> 
-    </section>
-     
-   <section>
-        <header>
-            2024 WSOA3028A
-            <nav>
+
+            <header id="mainHeader">
+                <h3 class="name">Amro Ahmed</h3>
+                <nav class="navBar">
+                    
+                </nav>
+            </header>
             
+            <h2 id="portfolioHeading">My Work</h2> 
+
+            <nav id="gameContainer">
+                <ul>
+                    <li class="selectable"><a href="../index.html"><p class="ChangableText">Project 1</p></a></li> 
+                </ul>          
             </nav>
-        </header>     
-    </section>
-        
-    <section>
+
+    
         <footer>
-            <p><a href="../index.html">Home</a> </p> 
+            
         </footer>
-    </section>
+    
 
 </body>
 

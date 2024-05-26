@@ -8,6 +8,10 @@ body{
     display: inline-flex;
     border-bottom: 1px solid rgb(0, 0, 0);
     position: sticky;
+    background-color: rgb(228, 228, 228);
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 #mainHeader nav ul{
@@ -28,7 +32,7 @@ body{
 }
 
 .navBar{
-    margin-left: 1000px;
+    margin-left: 66%;    
 }
 
 .name{
@@ -38,4 +42,18 @@ body{
 
 #mainHeader nav ul li a:visited{
     color: black;
+}
+
+
+@media (max-width: 360px) { 
+    #mainHeader{
+        display: inline-flex;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        position: fixed;
+        background-color: rgb(209, 0, 0);
+        width: 100%;
+    }
+    .navBar{
+        margin-left: 62%;    
+    }
 }

@@ -13,6 +13,7 @@
     background-color: rgb(210, 209, 209);
     padding: 3cm;
     position : relative;
+    size: 100%;
 }
 
 .cardClass:hover{
