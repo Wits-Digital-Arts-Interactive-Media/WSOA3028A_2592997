@@ -1,5 +1,5 @@
 window.onload = function() {
-    if (localStorage.getItem('visited') !== 'true') {
+    if (localStorage.getItem('visited') !== 'false') {
         localStorage.setItem('visited', 'false'); 
     }}
 
