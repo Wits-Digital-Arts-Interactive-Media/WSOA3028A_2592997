@@ -139,6 +139,9 @@
     margin-bottom: 50px;
 }
 
+#toggleSwitch{
+    background-image: url(../Images/LightbulbOn.jpg);
+}
 
 @media (max-width: 480px) {
     #mainHeader {

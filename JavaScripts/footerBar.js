@@ -10,7 +10,8 @@ const selectedElements = [
 ];
 
 var darkModeActive = false; 
-
+const elements = document.getElementsByClassName("cardClass");
+const cards = Array.from(elements);
 
 export function createFooter(){
     const nav = document.querySelector("body > footer > nav");
@@ -66,7 +67,20 @@ function darkMode(){
     darkModeActive = true;
     for (let i = 0; i < selectedElements.length; i++){
         selectedElements[i].element.style.backgroundColor = 'rgb(58, 58, 58)';
+    };
+    
+    for (let f = 0; f < cards.length; f++){
+        cards[f].style.backgroundColor = 'rgb(99, 99, 99)';
     }
+
+    const footer = document.getElementById("footerBar");
+    footer.style.backgroundColor = 'rgb(99, 99, 99)';
+
+    const darkModeContainer = document.getElementById("toggleBackground");
+    darkModeContainer.style.backgroundColor = 'rgb(77, 77, 77)';
+
+    const darkModeButton = document.getElementById("toggleSwitch");
+    darkModeButton.style.backgroundColor = 'black';
 }
 
 function lightMode(){
@@ -75,4 +89,17 @@ function lightMode(){
     for (let i = 0; i < selectedElements.length; i++){
         selectedElements[i].element.style.backgroundColor = 'white';
     }
+
+    for (let f = 0; f < cards.length; f++){
+        cards[f].style.backgroundColor = 'rgb(228, 228, 228)';
+    }
+
+    const footer = document.getElementById("footerBar");
+    footer.style.backgroundColor = 'rgb(228, 228, 228)';
+
+    const darkModeContainer = document.getElementById("toggleBackground");
+    darkModeContainer.style.backgroundColor = 'rgb(243, 243, 243)';
+
+    const darkModeButton = document.getElementById("toggleSwitch");
+    darkModeButton.style.backgroundColor = 'rgb(243, 243, 243)';
 }
