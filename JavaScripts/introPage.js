@@ -1,23 +1,38 @@
 const bodyText = document.getElementById("bodyText");
-
 const Page = document.getElementById("startupPage");
 
-console.log("localStorage.getItem('visited'):", localStorage.getItem('visited'));
-
+// Check if 'visited' flag is set in localStorage
 if (localStorage.getItem('visited') === 'true') {
-    console.log("its false");
+    Page.style.display = 'none';    
+} else {
     Page.style.display = 'flex';  
     Page.addEventListener("click", start);
-} else {
-    Page.style.display = 'none';
-    console.log("its true");
 }
 
-function start(event){    
-    Page.style.opacity = 0;    
+function start(event) {    
+    Page.style.opacity = 0;     
     Page.addEventListener('transitionend', () => {
-        console.log("Transitioned");
-        localStorage.setItem('visited', 'false');
+        localStorage.setItem('visited', 'true');
         bodyText.style.overflow = 'auto';
+        Page.style.display = 'none'; 
     });
 }
+
+// Global variable to track if beforeunload should be disabled
+let disableBeforeUnload = false;
+// Check if the clicked link is internal and set disableBeforeUnload accordingly
+document.addEventListener('click', function(event) {
+    const targetElement = event.target.closest('a');
+    if (targetElement && targetElement.href.startsWith(window.location.origin)) {
+        // Internal link clicked, disable beforeunload
+        disableBeforeUnload = true;
+    }
+});
+
+// Add beforeunload event listener with conditional behavior
+window.addEventListener('beforeunload', function(event) {
+    if (!disableBeforeUnload) {
+        localStorage.setItem('visited', 'false');
+        console.log("The 'visited' flag was reset");
+    }
+});

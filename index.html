@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="CSS/CardStyling.css">
     <link rel="stylesheet" href="CSS/GeneralStyling.css">
     <script src = "JavaScripts/CardInteraction.js" defer></script>
-    <script type="module"> import {initialise } from "./JavaScripts/menu.js" 
-        initialise("index.html")</script>
+    <script type="module"> import {initialise} from "./JavaScripts/menu.js" 
+        initialise("Home")</script>
     <script type="module" src="./JavaScripts/introPage.js"></script>
+    <script type="module"> import {createFooter} from "./JavaScripts/footerBar.js";
+        createFooter();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -49,8 +52,11 @@
         <div class="cardClass" data-url="./PortfolioFolder/index.html">Portfolio</div>
     </div>
      
-        <footer>
-            
+        <footer id="theFooter">
+            <nav id="footerBar">
+                <p id="footerHeading">Handcrafted by Amro Ahmed</p>
+                   
+            </nav>                
         </footer>
     
 </body>

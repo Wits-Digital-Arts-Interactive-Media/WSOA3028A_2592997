@@ -11,7 +11,6 @@ for(let i=0; i < options.length; i++){
 function clickedOnCard(event){
     const clickedOnCard = event.currentTarget;
     const url = clickedOnCard.getAttribute('data-url');
-    console.log(url);
     if (url){
         window.location.href = url;
     }
