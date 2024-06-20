@@ -4,14 +4,21 @@ const options = [
     //{name : "hide", href:`/WSOA3028A_2592997/index.html`}
 ];
 
+
 const selectedElements = [
     {element: document.body},
     {element: document.querySelector('#mainHeader')},
 ];
 
 var darkModeActive = false; 
+
 const elements = document.getElementsByClassName("cardClass");
 const cards = Array.from(elements);
+
+const cardElements = document.getElementsByClassName("selectable");
+const blogCards = Array.from(cardElements);
+
+
 
 export function createFooter(){
     const nav = document.querySelector("body > footer > nav");
@@ -40,6 +47,10 @@ export function createFooter(){
         }
     });
 
+    if (localStorage.getItem('darkModeOn') == 'true'){
+        darkMode();
+    }
+
     const hideButtonLi = document.createElement("li");
     const hideButton = document.createElement("button");
     hideButton.id = "hideContainer";
@@ -63,6 +74,7 @@ export function createFooter(){
 }
 
 function darkMode(){
+    localStorage.setItem('darkModeOn', 'true');
     document.body.style.backgroundColor = 'rgb(58, 58, 58)';
     darkModeActive = true;
     for (let i = 0; i < selectedElements.length; i++){
@@ -71,6 +83,10 @@ function darkMode(){
     
     for (let f = 0; f < cards.length; f++){
         cards[f].style.backgroundColor = 'rgb(99, 99, 99)';
+    }
+
+    for (let g = 0; g < blogCards.length; g++){
+        blogCards[g].style.backgroundColor = 'rgb(99, 99, 99)';
     }
 
     const footer = document.getElementById("footerBar");
@@ -94,6 +110,10 @@ function lightMode(){
         cards[f].style.backgroundColor = 'rgb(228, 228, 228)';
     }
 
+    for (let g = 0; g < blogCards.length; g++){
+        blogCards[g].style.backgroundColor = 'rgb(228, 228, 228)';
+    }
+
     const footer = document.getElementById("footerBar");
     footer.style.backgroundColor = 'rgb(228, 228, 228)';
 
@@ -102,4 +122,20 @@ function lightMode(){
 
     const darkModeButton = document.getElementById("toggleSwitch");
     darkModeButton.style.backgroundColor = 'rgb(243, 243, 243)';
+    
 }
+
+let disableBeforeUnload = false;
+
+document.addEventListener('click', function(event) {
+    const targetElement = event.target.closest('a');
+    if (targetElement && targetElement.href.startsWith(window.location.origin)) {
+        disableBeforeUnload = true;
+    }
+});
+
+window.addEventListener('beforeunload', function(event) {
+    if (!disableBeforeUnload) {
+        localStorage.setItem('darkModeOn', 'false');
+    }
+});

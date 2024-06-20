@@ -8,6 +8,9 @@
     <script type="module" src="../JavaScripts/blogTextChange.js"></script>
     <script type="module"> import {initialise } from "../JavaScripts/menu.js" 
         initialise("Blogs")</script>
+    <script type="module"> import {createFooter} from "../JavaScripts/footerBar.js";
+        createFooter();
+    </script>
 
     <title >Blogs</title>
 </head>
@@ -43,11 +46,12 @@
         </ul>            
     </nav>   
 
-    <section>
-        <footer>
+    <footer id="theFooter">
+        <nav id="footerBar">
+            <p id="footerHeading">Handcrafted by Amro Ahmed</p>
             
-        </footer>
-    </section>    
+        </nav>
+    </footer>  
 
 </body>
 </html>
