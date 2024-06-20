@@ -29,13 +29,7 @@ document.addEventListener('click', function(event) {
 
 window.addEventListener('beforeunload', function(event) {
     if (!disableBeforeUnload) {
-        // Check if a card was clicked (assuming all cards have data-url attributes)
-        const clickedOnCard = Array.from(document.getElementsByClassName('cardClass'))
-                                  .some(card => card.contains(event.target));
-
-        if (!clickedOnCard) {
-            localStorage.setItem('visited', 'false');
-            console.log("The 'visited' flag was reset");
-        }
+        localStorage.setItem('visited', 'false');
+        console.log("The 'visited' flag was reset");
     }
 });

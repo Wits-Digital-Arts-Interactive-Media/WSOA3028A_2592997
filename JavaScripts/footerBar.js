@@ -124,3 +124,18 @@ function lightMode(){
     darkModeButton.style.backgroundColor = 'rgb(243, 243, 243)';
     
 }
+
+let disableDarkBeforeUnload = false;
+
+document.addEventListener('click', function(event) {
+    const targetElement = event.target.closest('a');
+    if (targetElement && targetElement.href.startsWith(window.location.origin)) {
+        disableDarkBeforeUnload = true;
+    }
+});
+
+window.addEventListener('beforeunload', function(event) {
+    if (!disableDarkBeforeUnload) {
+        localStorage.setItem('darkModeOn', 'false');
+    }
+});
