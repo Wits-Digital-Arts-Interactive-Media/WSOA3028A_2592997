@@ -20,22 +20,12 @@ function start(event) {
 
 // Global variable to track if beforeunload should be disabled
 let disableBeforeUnload = false;
-
-// Check if the clicked link is internal or a card with data-url and set disableBeforeUnload accordingly
+// Check if the clicked link is internal and set disableBeforeUnload accordingly
 document.addEventListener('click', function(event) {
     const targetElement = event.target.closest('a');
     if (targetElement && targetElement.href.startsWith(window.location.origin)) {
         // Internal link clicked, disable beforeunload
         disableBeforeUnload = true;
-    } else {
-        // Check if a card was clicked (assuming all cards have data-url attributes)
-        const clickedOnCard = Array.from(document.getElementsByClassName('cardClass'))
-                                  .some(card => card.contains(event.target));
-
-        if (clickedOnCard) {
-            // Card clicked, disable beforeunload
-            disableBeforeUnload = true;
-        }
     }
 });
 
@@ -46,4 +36,3 @@ window.addEventListener('beforeunload', function(event) {
         console.log("The 'visited' flag was reset");
     }
 });
-
