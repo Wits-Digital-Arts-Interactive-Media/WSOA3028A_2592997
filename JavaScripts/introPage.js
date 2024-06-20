@@ -25,16 +25,6 @@ document.addEventListener('click', function(event) {
     if (targetElement && targetElement.href.startsWith(window.location.origin)) {
         disableBeforeUnload = true;
     }
-    
-    const targetCard = event.target.closest('.cardClass');
-    if (targetCard) {
-        const url = targetCard.getAttribute('data-url');
-        if (url && url.startsWith(window.location.origin)) {
-            localStorage.setItem('visited', 'true');
-        } else {
-            localStorage.setItem('visited', 'false');
-        }
-    }
 });
 
 

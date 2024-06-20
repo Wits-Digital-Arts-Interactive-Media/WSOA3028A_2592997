@@ -63,6 +63,14 @@
     margin-left: auto;
 }
 
+.anchorText{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+
 #mainHeader nav ul {
     list-style: none;
     padding: 0;
