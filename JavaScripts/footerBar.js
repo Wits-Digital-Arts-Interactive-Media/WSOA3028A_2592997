@@ -125,17 +125,17 @@ function lightMode(){
     
 }
 
-let disableDarkBeforeUnload = false;
+let disableBeforeUnload = false;
 
 document.addEventListener('click', function(event) {
     const targetElement = event.target.closest('a');
     if (targetElement && targetElement.href.startsWith(window.location.origin)) {
-        disableDarkBeforeUnload = true;
+        disableBeforeUnload = true;
     }
 });
 
 window.addEventListener('beforeunload', function(event) {
-    if (!disableDarkBeforeUnload) {
+    if (!disableBeforeUnload) {
         localStorage.setItem('darkModeOn', 'false');
     }
 });
