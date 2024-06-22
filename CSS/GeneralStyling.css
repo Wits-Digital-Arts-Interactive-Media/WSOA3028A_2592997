@@ -241,4 +241,16 @@
         top: 20px;
         width: 70%;
     }
+
+    #BlogNavigationBar nav ul{
+        margin-left: 0px;
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        gap: 2px;
+    }
+
+    #BlogNavigationBar nav ul li{
+        font-size: 10px;
+    }
 }
