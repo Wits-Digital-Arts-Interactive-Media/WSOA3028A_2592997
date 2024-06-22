@@ -13,7 +13,13 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
         <link rel="stylesheet" href="../../CSS/BlogOrganisation.css">
-
+        <script type="module"> import {createFooter} from "../../JavaScripts/footerBar.js";
+            createFooter();
+        </script>
+        <link rel="stylesheet" href="../../CSS/footerBar.css">  
+        <script type="module"> import {createBlogNavigationBar} from "../../JavaScripts/blogNavigation.js"
+            createBlogNavigationBar("Blog 4");
+        </script>
 </head>
 
 <body>
@@ -37,5 +43,19 @@
 
     <h3>Reflect on your work for website 1</h3>
     <p>Designing this website was a tremendous relief for me. Initially, I approached this course with some apprehension, fearing the complexity it might entail. Surprisingly, learning HTML turned out to be one of the easiest skills I've acquired in my digital arts career. While not necessarily a challenge, I did find myself growing somewhat frustrated with the extensive writing and reading requirements. However, I understand that these tasks are ultimately for my own benefit, so I can't really complain. Looking ahead, one aspect I'd like to improve upon is the implementation of CSS to enhance the visual appeal of my website.</p>
+
+    <section id="BlogNavigationBar">
+        <nav>
+
+        </nav>
+    </section>
+    
+    <footer id="theFooter">
+        <nav id="footerBar">
+            <p id="footerHeading">Handcrafted by Amro Ahmed</p>
+               
+        </nav>                
+    </footer>
+    
 </body>
 </html>

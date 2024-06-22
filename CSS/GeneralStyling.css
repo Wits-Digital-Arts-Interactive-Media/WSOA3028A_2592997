@@ -5,6 +5,8 @@
 
 #startupPage{
     position: absolute;
+    top: -5px;
+    left: -3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +22,13 @@
     transition: opacity 1s ease-in-out;
 }
 
+.blogName{
+    text-decoration: none;
+}
 
+#blogBody{
+    overflow: hidden;
+}
 
 
 #startupText{
@@ -53,6 +61,7 @@
     position: sticky;
     background-color: white;
     width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     padding: 0 20px;
@@ -104,9 +113,11 @@
 
 #footerBar{
     width: 50%;
+    height: 100%;
     background-color: rgb(228, 228, 228);
     margin: auto;
     border-radius: 25px;
+    position: relative;
 }
 
 #footerBar ul{
@@ -131,6 +142,12 @@
     border-radius: 50%;
     width: 24px;
     height: 24px;
+    background-image: url('../Images/LightbulbOn.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 1px;
 }
 
 #hideContainer{
@@ -140,16 +157,45 @@
     height: 24px;
     text-align: center;
     border: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
 }
 
 #theFooter{
-    position: relative;
-    margin-bottom: 50px;
+    position: fixed;
+    width: 100%;
+    top: 620px;
+    left: 10px;
 }
 
-#toggleSwitch{
-    background-image: url(../Images/LightbulbOn.jpg);
+#theFooter:hover {
+    cursor: pointer;
 }
+
+#hideContainer{
+    cursor: pointer;
+}
+
+#BlogNavigationBar{
+    margin: auto;
+    display: block;
+    border-style: solid;
+    border-radius: 24px;
+}
+
+#BlogNavigationBar nav ul{
+    margin-left: 200px;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+#BlogNavigationBar nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
 
 @media (max-width: 480px) {
     #mainHeader {

@@ -14,6 +14,10 @@
         rel="stylesheet">
         <link rel="stylesheet" href="../../CSS/BlogOrganisation.css">
     <title>Portfolio</title>
+    <script type="module"> import {createFooter} from "../JavaScripts/footerBar.js";
+        createFooter();
+    </script>
+     <link rel="stylesheet" href="../CSS/footerBar.css">
 </head>
 
 <body>
@@ -25,18 +29,25 @@
                 </nav>
             </header>
             
-            <h2 id="portfolioHeading">My Work</h2> 
+            <h2 id="portfolioHeading">My Work</h2>
 
-            <nav id="gameContainer">
-                <ul>
-                    <li class="selectable"><a href="../index.html"><p class="ChangableText">Nothing here yet. Go home?</p></a></li> 
-                </ul>          
-            </nav>
-
+            <section id="portfolioContainer">
+                <div id="projectContainer1">
+                    <h3 id="projectName1">Bullets Hurt</h3>
+                    <button id="downloadButton1"> <a href="../Data/Bullets Hurt.zip" download="Bullets Hurt">Download game</a></button>
+                </div>
+                <div id="projectContainer2">
+                    <h3 id="projectName2">Prop Hunt</h3>
+                    <button id="downloadButton2"> <a href="../Data/Prop Bunt.zip" download="Prop Hunt">Download game</a></button>
+                </div>
+            </section>
     
-        <footer>
-            
-        </footer>
+            <footer id="theFooter">
+                <nav id="footerBar">
+                    <p id="footerHeading">Handcrafted by Amro Ahmed</p>
+                       
+                </nav>                
+            </footer>
     
 
 </body>

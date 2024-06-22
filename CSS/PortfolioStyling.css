@@ -6,28 +6,114 @@ body{
     text-align: center;
 }
 
-#gameContainer ul{
-    list-style: none;
+#portfolioContainer {
     display: flex;
-    flex-direction: column; 
-    align-items: center;
-    padding: 0;
-    gap: 3px;
-}
-
-#gameContainer{
-    text-align: center;
+    gap: 20px;
     justify-content: center;
-}
-
-.selectable{
-    width: 350px;
-    height: 40px;
-    border-radius: 25px;
+    align-items: center;  
+    position: relative;
+    top: 4px;
+  }
+  
+  #projectContainer1 {
+    justify-content: center; 
+    align-items: center; 
     background-color: rgb(210, 209, 209);
-}
+    border-radius: 20px;
+    height: 225px;
+    width: 400px;
+    margin: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  #projectContainer1:hover #downloadButton1{
+    opacity: 1;
+    top: 180px;
+    left: 100px;
+  }
 
-.selectable a{
+  #projectContainer1:hover {
+    background-image: url('../Images/Bullets\ Hurt\ Gameplay.png');
+  }
+  
+  #projectContainer2:hover {
+    background-image: url('../Images/Prop\ Hunt\ Gameplay.png');
+  }
+
+  #projectContainer1:hover #projectName1{
+    top: -48px;
+  }
+
+  #projectContainer2:hover #projectName2{
+    top: -48px;
+  }
+
+  #projectContainer2:hover #downloadButton2{
+    opacity: 1;
+    top: 180px;
+    left: 100px;
+  }
+
+  #projectContainer2 {
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgb(210, 209, 209);
+    border-radius: 20px;
+    height: 225px;
+    width: 400px;
+    margin: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  #downloadButton1 a{
+    text-decoration: none;
     color: black;
-}
+    position: relative;
+  }
+
+  #downloadButton2 a{
+    text-decoration: none;
+    color: black;
+  }
+
+  #projectName1 {
+    text-align: center;
+    position: relative;
+    top: 70px; 
+    left: 12px;
+    transition: top 0.5s ease;
+  }
+  
+  #projectName2 {
+    text-align: center;
+    position: relative;
+    top: 70px; 
+    transition: top 0.5s ease;
+  }
+
+  #downloadButton1{
+    border-radius: 25px;
+    position: relative;
+    top: 180px;
+    left: 100px;
+    width: 200px;
+    height: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  #downloadButton2{
+    border-radius: 25px;
+    position: relative;
+    top: 180px;
+    left: 100px;
+    width: 200px;
+    height: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
 

@@ -11,11 +11,19 @@ const selectedElements = [
 
 var darkModeActive = false; 
 
+localStorage.getItem('footerBarActive');
+
 const elements = document.getElementsByClassName("cardClass");
 const cards = Array.from(elements);
 
 const cardElements = document.getElementsByClassName("selectable");
 const blogCards = Array.from(cardElements);
+
+const portfolioContainer1 = document.getElementById("projectContainer1");
+const portfolioContainer2 = document.getElementById("projectContainer2");
+
+const downloadButton1 = document.getElementById("downloadButton1");
+const downloadButton2 = document.getElementById("downloadButton2");
 
 export function createFooter(){
     const nav = document.querySelector("body > footer > nav");
@@ -51,9 +59,30 @@ export function createFooter(){
     hideButtonLi.appendChild(hideButton);
     ul.appendChild(hideButtonLi);
 
-    hideButton.addEventListener('click', function(){
-        const footer = document.getElementById('theFooter');
-        footer.style.bottom = '-80px';
+
+    hideButton.addEventListener('click', function() {
+        localStorage.setItem('footerBarActive', 'false');
+        const footerBar = document.getElementById('footerBar');
+        const childElements = footerBar.children;
+        Array.from(childElements).forEach(function(child) {
+            child.style.opacity = 0;
+            child.style.width = '0px';
+            child.style.height = '0px';
+            child.disabled = true; 
+            child.style.pointerEvents = 'none'; 
+        });
+        footerBar.style.animation = 'hideFooter 0.5s forwards';
+
+        footerBar.addEventListener('animationend', function(event) {
+            if (event.animationName === 'hideFooter') {
+                footerBar.addEventListener('click', resetFooter);
+            }
+        });
+        
+    });
+
+    hideButton.addEventListener('click', function() {
+        console.log('Button clicked!');
     });
 
     for (let i = 0; i < options.length; i++){
@@ -64,11 +93,37 @@ export function createFooter(){
         ul.appendChild(li);
     }
     nav.appendChild(ul);
+
+    //Dark Mode Checker 888888888888888888888888888
+
     if (localStorage.getItem('darkModeOn') == 'true'){
         darkMode();
         const currentLeft = parseInt(button.style.left, 10);
         button.style.left = (currentLeft + 23) + 'px';
+
+              
     }
+
+    //Footer Mode Checker 888888888888888888888888888
+
+    if (localStorage.getItem('footerBarActive') == 'false'){
+        const footerBar = document.getElementById('footerBar');
+        const childElements = footerBar.children;
+        Array.from(childElements).forEach(function(child) {
+            child.style.opacity = 0;
+            child.style.width = '0px';
+            child.style.height = '0px';
+            child.disabled = true; 
+            child.style.pointerEvents = 'none'; 
+        });
+        footerBar.style.animation = 'hideFooter 0.5s forwards';
+
+        footerBar.addEventListener('animationend', function(event) {
+            if (event.animationName === 'hideFooter') {
+                footerBar.addEventListener('click', resetFooter);
+            }
+        });
+    }  
 }
 
 function darkMode(){
@@ -77,6 +132,8 @@ function darkMode(){
     }
     document.body.style.backgroundColor = 'rgb(58, 58, 58)';
     darkModeActive = true;
+    const hideButton = document.getElementById("hideContainer");
+    hideButton.style.backgroundColor = 'rgb(99, 99, 99)';
     for (let i = 0; i < selectedElements.length; i++){
         selectedElements[i].element.style.backgroundColor = 'rgb(58, 58, 58)';
     };
@@ -87,6 +144,22 @@ function darkMode(){
 
     for (let g = 0; g < blogCards.length; g++){
         blogCards[g].style.backgroundColor = 'rgb(99, 99, 99)';
+    }
+
+    if (portfolioContainer1 != null){
+        portfolioContainer1.style.backgroundColor = 'rgb(99, 99, 99)';
+    }
+
+    if (portfolioContainer2 != null){
+        portfolioContainer2.style.backgroundColor = 'rgb(99, 99, 99)';
+    }
+
+    if (downloadButton1 != null){
+        downloadButton1.style.backgroundColor = 'rgb(99, 99, 99)';
+    }
+
+    if (downloadButton2 != null){
+        downloadButton2.style.backgroundColor = 'rgb(99, 99, 99)';
     }
 
     const footer = document.getElementById("footerBar");
@@ -117,6 +190,25 @@ function lightMode(){
         blogCards[g].style.backgroundColor = 'rgb(228, 228, 228)';
     }
 
+    const hideButton = document.getElementById("hideContainer");
+    hideButton.style.backgroundColor = 'rgb(228, 228, 228)';
+
+    if (portfolioContainer1 != null){
+        portfolioContainer1.style.backgroundColor = 'rgb(228, 228, 228)';
+    }
+
+    if (portfolioContainer2 != null){
+        portfolioContainer2.style.backgroundColor = 'rgb(228, 228, 228)';
+    }
+
+    if (downloadButton1 != null){
+        downloadButton1.style.backgroundColor = 'rgb(228, 228, 228)';
+    }
+
+    if (downloadButton2 != null){
+        downloadButton2.style.backgroundColor = 'rgb(228, 228, 228)';
+    }
+
     const footer = document.getElementById("footerBar");
     footer.style.backgroundColor = 'rgb(228, 228, 228)';
 
@@ -125,4 +217,25 @@ function lightMode(){
 
     const darkModeButton = document.getElementById("toggleSwitch");
     darkModeButton.style.backgroundColor = 'rgb(243, 243, 243)';
+}
+
+function resetFooter(){
+    const childElementsInactive = footerBar.children;
+        Array.from(childElementsInactive).forEach(function(inactiveChild) {
+            inactiveChild.style.opacity = 1;
+            inactiveChild.style.width = '100%';
+            inactiveChild.style.height = '100%';
+            inactiveChild.disabled = false; 
+            inactiveChild.style.pointerEvents = 'auto'; 
+        });
+    footerBar.style.animation = 'showFooter 0.5s forwards';
+    footerBar.removeEventListener('click', resetFooter);
+    localStorage.setItem('footerBarActive', 'true');
+    const footer = document.getElementById("footerBar");
+    if (darkModeActive == 'true'){
+        footer.style.backgroundColor = 'rgb(99, 99, 99)';
+    }
+    else{
+        footer.style.backgroundColor = 'rgb(228, 228, 228)';
+    }
 }

@@ -2,6 +2,7 @@ const gameTexts = document.getElementsByClassName("ChangableText");
 const toTexts = ["Nothing here yet. Go home?"];
 const backTexts = ["Nothing here yet. Go home?"];
 
+
 for(let i= 0; i < gameTexts.length; i++){
     gameTexts[i].setAttribute('data-index', i);
     gameTexts[i].addEventListener("mouseover", changeText);
@@ -19,3 +20,5 @@ function revertText(event){
     const index = gameBox.getAttribute('data-index');
     gameBox.textContent = backTexts[index];
 }
+
+

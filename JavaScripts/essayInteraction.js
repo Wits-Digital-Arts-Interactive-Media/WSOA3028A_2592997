@@ -1,6 +1,6 @@
 const essayTexts = document.getElementsByClassName("essayChangableText");
-const toTexts = ["Ethical UI & UX"];
-const backTexts = ["Essay 1"];
+const toTexts = ["Ethical UI & UX", "Digital Colonialism"];
+const backTexts = ["Essay 1", "Essay 2"];
 
 
 for(let i= 0; i < essayTexts.length; i++){

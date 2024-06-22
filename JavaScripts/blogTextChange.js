@@ -20,3 +20,5 @@ function revertText(event){
     const index = blogBox.getAttribute('data-index');
     blogBox.textContent = backTexts[index];
 }
+
+

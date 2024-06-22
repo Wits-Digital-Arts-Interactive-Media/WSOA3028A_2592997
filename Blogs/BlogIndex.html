@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/GeneralStyling.css">
     <link rel="stylesheet" href="../CSS/BlogOrganisation.css">
-    <script type="module" src="../JavaScripts/blogTextChange.js"></script>
+    <script type="module" src="../JavaScripts/blogPageController.js"></script>
     <script type="module"> import {initialise } from "../JavaScripts/menu.js" 
         initialise("Blogs")</script>
     <script type="module"> import {createFooter} from "../JavaScripts/footerBar.js";
         createFooter();
     </script>
+    <link rel="stylesheet" href="../CSS/footerBar.css">
 
     <title >Blogs</title>
 </head>
@@ -22,7 +23,7 @@
     </nav>
 </header>
 
-<body>
+<body id="blogBody">
     <section>
         <h1 id="blogTitle">Weekly Blogs</h1>
     </section>
@@ -32,17 +33,17 @@
     
     <nav id="blogSelection">
         <ul>
-            <li class="selectable"><a href="WeeklyBlogs/Week 1.html"><p class="changableText">Week 1</p></a></li>
-            <li class="selectable"><a href="WeeklyBlogs/Week 2.html"><p class="changableText">Week 2</p></a></li>
-            <li class="selectable"><a href="WeeklyBlogs/Week 3.html"><p class="changableText">Week 3</p></a></li>
-            <li class="selectable"><a href="WeeklyBlogs/Week 4.html"><p class="changableText">Week 4</p></a></li>
-            <li class="selectable"><a href="WeeklyBlogs/Week 6.html"><p class="changableText">Week 6</p></a></li>
-            <li class="selectable"><a href="WeeklyBlogs/Week 8.html"><p class="changableText">Week 8</p></a></li>
-            <li class="selectable"><a href="WeeklyBlogs/Week 9.html"><p class="changableText">Week 9</p></a></li>
-            <li class="selectable"><a href="WeeklyBlogs/Week 10.html"><p class="changableText">Week 10</p></a></li>
-            <li class="selectable"><a href="WeeklyBlogs/Week 11.html"><p class="changableText">Week 11</p></a></li>
-            <li class="selectable"><a href="WeeklyBlogs/Week 12.html"><p class="changableText">Week 12</p></a></li>
-            <li class="selectable"><a href="WeeklyBlogs/Week 13.html"><p class="changableText">Week 13</p></a></li>
+            <li class="selectable"><a class="blogName" href="WeeklyBlogs/Week 1.html"><p class="changableText">Week 1</p></a></li>
+            <li class="selectable"><a class="blogName" href="WeeklyBlogs/Week 2.html"><p class="changableText">Week 2</p></a></li>
+            <li class="selectable"><a class="blogName" href="WeeklyBlogs/Week 3.html"><p class="changableText">Week 3</p></a></li>
+            <li class="selectable"><a class="blogName" href="WeeklyBlogs/Week 4.html"><p class="changableText">Week 4</p></a></li>
+            <li class="selectable"><a class="blogName" href="WeeklyBlogs/Week 6.html"><p class="changableText">Week 6</p></a></li>
+            <li class="selectable"><a class="blogName" href="WeeklyBlogs/Week 8.html"><p class="changableText">Week 8</p></a></li>
+            <li class="selectable"><a class="blogName" href="WeeklyBlogs/Week 9.html"><p class="changableText">Week 9</p></a></li>
+            <li class="selectable"><a class="blogName" href="WeeklyBlogs/Week 10.html"><p class="changableText">Week 10</p></a></li>
+            <li class="selectable"><a class="blogName" href="WeeklyBlogs/Week 11.html"><p class="changableText">Week 11</p></a></li>
+            <li class="selectable"><a class="blogName" href="WeeklyBlogs/Week 12.html"><p class="changableText">Week 12</p></a></li>
+            <li class="selectable"><a class="blogName" href="WeeklyBlogs/Week 13.html"><p class="changableText">Week 13</p></a></li>
         </ul>            
     </nav>   
 

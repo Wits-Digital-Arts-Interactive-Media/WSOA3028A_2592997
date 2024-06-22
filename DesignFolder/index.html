@@ -12,6 +12,10 @@
         <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+        <script type="module"> import {createFooter} from "../JavaScripts/footerBar.js";
+            createFooter();
+        </script>
+        <link rel="stylesheet" href="../CSS/footerBar.css"> 
 </head>
 
 <body>
@@ -26,6 +30,14 @@
     <div id="container">
         <div class="selectable" data-url="./DesignPages/StyleGuide.html"><a href = "./DesignPages/StyleGuide.html"> <h3>Style Guide</h3></a></div>
         <div class="selectable" data-url="./DesignPages/UIWireframes.html"><a href = "./DesignPages/UIWireframes.html"> <h3>Design Section</h3></a></div>
-    </div>    
+    </div>
+    
+    <footer id="theFooter">
+        <nav id="footerBar">
+            <p id="footerHeading">Handcrafted by Amro Ahmed</p>
+               
+        </nav>                
+    </footer>
+
 </body>
 </html>
