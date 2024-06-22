@@ -117,3 +117,88 @@ body{
     transition: opacity 0.5s ease;
   }
 
+  @media (max-width: 480px) {
+    
+      #projectContainer1{
+        width: 200px;
+        height: 113px;
+      }
+
+      #projectContainer2{
+        width: 200px;
+        height: 113px;
+      }
+
+      #portfolioContainer{
+        display: block;
+        left: 0px;
+        width: 200px;
+      }
+
+      #downloadButton1{
+        width: 40px;
+      }
+
+      #downloadButton2{
+        width: 40px;
+      }
+
+      #projectContainer1{
+        background-image: url('../Images/Bullets\ Hurt\ Gameplay.png');
+      }
+      
+      #projectContainer2{
+        background-image: url('../Images/Prop\ Hunt\ Gameplay.png');
+      }
+
+      #downloadButton1{
+        opacity: 1;
+        left: 220px;
+        top: 0px;
+        width: 150px;
+      }
+
+      #downloadButton2{
+        opacity: 1;
+        left: 220px;
+        top: 0px;
+        width: 150px;
+      }
+
+      #projectName1 {
+        left: 200px;
+        top: 0px;
+        transition: none;
+      }
+
+      #projectName2 {
+        left: 200px;
+        top: 0px;
+        transition: none;
+      }
+      #projectContainer1:hover #downloadButton1{
+        opacity: 1;
+        left: 220px;
+        top: 0px;
+        width: 150px;
+      }
+  
+    
+      #projectContainer1:hover #projectName1{
+        left: 200px;
+        top: 0px;
+      }
+    
+      #projectContainer2:hover #projectName2{
+        left: 200px;
+        top: 0px;
+      }
+    
+      #projectContainer2:hover #downloadButton2{
+        opacity: 1;
+        left: 220px;
+        top: 0px;
+        width: 150px;
+      }
+    
+    }

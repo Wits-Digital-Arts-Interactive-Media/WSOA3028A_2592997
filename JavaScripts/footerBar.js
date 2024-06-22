@@ -131,7 +131,7 @@ function darkMode(){
         localStorage.setItem('darkModeOn', 'true');
     }
     document.body.style.backgroundColor = 'rgb(58, 58, 58)';
-    darkModeActive = true;
+    darkModeActive = 'true';
     const hideButton = document.getElementById("hideContainer");
     hideButton.style.backgroundColor = 'rgb(99, 99, 99)';
     for (let i = 0; i < selectedElements.length; i++){

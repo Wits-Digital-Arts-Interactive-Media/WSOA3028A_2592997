@@ -236,4 +236,9 @@
         white-space: normal;
         overflow: visible; 
     }
+    
+    #footerBar{
+        top: 20px;
+        width: 70%;
+    }
 }
