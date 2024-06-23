@@ -25,6 +25,9 @@ const portfolioContainer2 = document.getElementById("projectContainer2");
 const downloadButton1 = document.getElementById("downloadButton1");
 const downloadButton2 = document.getElementById("downloadButton2");
 
+const iterationButtons = document.getElementsByClassName("iterationButtons");
+const buttonsArray = Array.from(iterationButtons);
+
 export function createFooter(){
     const nav = document.querySelector("body > footer > nav");
     const ul = document.createElement("ul");
@@ -134,6 +137,11 @@ function darkMode(){
     darkModeActive = 'true';
     const hideButton = document.getElementById("hideContainer");
     hideButton.style.backgroundColor = 'rgb(99, 99, 99)';
+    
+    for (let i = 0; i < buttonsArray.length; i++){
+        buttonsArray[i].style.backgroundColor = 'rgb(99, 99, 99)';
+    };
+
     for (let i = 0; i < selectedElements.length; i++){
         selectedElements[i].element.style.backgroundColor = 'rgb(58, 58, 58)';
     };
@@ -189,6 +197,10 @@ function lightMode(){
     for (let g = 0; g < blogCards.length; g++){
         blogCards[g].style.backgroundColor = 'rgb(228, 228, 228)';
     }
+    
+    for (let i = 0; i < buttonsArray.length; i++){
+        buttonsArray[i].style.backgroundColor = 'rgb(228, 228, 228)';
+    };
 
     const hideButton = document.getElementById("hideContainer");
     hideButton.style.backgroundColor = 'rgb(228, 228, 228)';

@@ -43,6 +43,110 @@ body{
     margin-right: auto;
 }
 
+.designCard {
+    position: relative; 
+    height: 440px;
+    transition: height 0.5s ease;
+}
+
+.designCard:hover {
+    height: 380px;
+}
+
+.designIterationsContainer {
+    position: absolute; 
+    bottom: -54px;
+    left: 0;
+    width: 100%; 
+    display: flex;
+    justify-content: space-around; 
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.designCard:hover .designIterationsContainer {
+    opacity: 1;
+}
+
+.iterationButtons {
+    background-color: rgb(210, 209, 209);
+    border-radius: 25px;
+    width: 90px;
+    height: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.iterationButtons a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    line-height: 50px;
+}
+
+.styleGuideCard {
+    position: relative; 
+    height: 440px;
+    transition: height 0.5s ease;
+}
+
+.styleGuideCard:hover {
+    height: 380px;
+}
+
+.styleGuideIterationsContainer{
+    position: absolute; 
+    bottom: -54px;
+    left: 0;
+    width: 100%; 
+    display: flex;
+    justify-content: space-around; 
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.styleGuideCard:hover .styleGuideIterationsContainer {
+    opacity: 1;
+}
+
+#wireframeText{
+    text-align: center;
+}
+
+.gallery{
+    margin-left: auto;
+    margin-right: auto;
+    width: 990px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+}
+
+.gallery div img{
+    width: 100%;
+}
+
+.gallery::-webkit-scrollbar{
+    width: 45px;
+}
+
+.gallery::-webkit-scrollbar-thumb{
+    background-color: black;
+}
+
+.gallery::-webkit-scrollbar-track{
+    background-color: gray;
+}
+
 @media (max-width: 470px) {
     .images{
         width: 300px;
@@ -54,12 +158,41 @@ body{
         margin-top: 150px;
         flex-direction: column;
         justify-content: center;
-        height: 30px;
+        height: 10px;
         width: 240px;
     }
     .selectable{
         width: 250px;
-        height: 440px;
+        height: 400px;
+        margin-top: 40px;
+    }
+
+    .gallery{
+        margin-left: auto;
+        margin-right: auto;
+        width: 400px;
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .designIterationsContainer {
+        position: absolute; 
+        bottom: -54px;
+        left: 0;
+        width: 100%; 
+        display: flex;
+        justify-content: space-around; 
+        opacity: 1;
+    }
+
+    .styleGuideIterationsContainer{
+        position: absolute; 
+        bottom: -54px;
+        left: 0;
+        width: 100%; 
+        display: flex;
+        justify-content: space-around; 
+        opacity: 1;
     }
 }
 
